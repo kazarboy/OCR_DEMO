@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IronOcr.Japanese</name>
+    </assembly>
+    <members>
+        <member name="T:IronOcr.Languages.Japanese">
+            <summary>
+              Japanese (日本語/Nihongo) Language Pack for IronOcr.  
+              <para> Requires IronOcr to be of value http://ironsoftware.com/csharp/ocr/ </para>
+              <example><code>IronOcr.Language = IronOcr.Languages.Japanese.OcrLanguagePack</code></example>
+            </summary>
+        </member>
+        <member name="P:IronOcr.Languages.Japanese.LanguageCode">
+            <exclude />
+        </member>
+        <member name="M:IronOcr.Languages.Japanese.Deploy(System.String)">
+            <exclude />
+        </member>
+        <member name="M:IronOcr.Languages.Japanese.ToString">
+            <exclude />
+        </member>
+        <member name="P:IronOcr.Languages.Japanese.OcrLanguagePack">
+            Japanese (jpn) Language pack for IronOcr
+        </member>
+    </members>
+</doc>

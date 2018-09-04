@@ -1,0 +1,26 @@
+﻿thumbwrap {
+    position: relative;
+    margin: 55px auto;
+    width: 100px;
+    height: 100px;
+}
+
+.thumb img {
+    border: 1px solid #000;
+    margin: 3px;
+    float: left;
+    width: 80%;
+    height: 80%;
+}
+
+.thumb span {
+    position: absolute;
+    visibility: hidden;
+}
+
+.thumb:hover, .thumb:hover span {
+    visibility: visible;
+    top: 0;
+    left: 100px;
+    z-index:1;
+}

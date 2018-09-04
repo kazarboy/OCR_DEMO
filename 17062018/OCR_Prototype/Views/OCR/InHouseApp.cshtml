@@ -1,0 +1,240 @@
+﻿@model IEnumerable<OCR_Prototype.Models.OCRModel.getDetails>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - InHouse Application Form</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/font-awesome-4.7.0/css/font-awesome.css")
+    @Styles.Render("~/Content/hover.css")
+    @Styles.Render("~/Content/custom.css")
+</head>
+<body>
+    @{
+        List<string> retrievedetail = new List<string>();
+
+        foreach (var itemref in Model)
+        {
+            retrievedetail.Add(itemref.Crop_Text);
+
+        }
+    }
+
+    <div class="rowmargin">
+        <div class="col-md-10">
+            <div class="panel panel-primary">
+                <div class="panel-heading clickable">
+                    <h3 class="panel-title">
+                        Account Opening Page 1
+                    </h3>
+                    <span class="pull-right "><i class="fa fa-minus"></i></span>
+                </div>
+                <div class="panel-body">
+                    <div class="form">
+                        <div class="col-md-12">
+                            <div class="col-md-12 text-center">
+                                <h2><u><b>IN-HOUSE APPLICATION FOR OPENING OF A CURRENT ACCOUNT</b></u></h2>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <h4><b>当座預金口座開設書</b></h4>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-4 text-center BusRowTop">
+                                    <h4><b>APPLICATION FOR OPENING OF NEW CURRENT ACCOUNT</b></h4>
+                                </div>
+                                <div class="col-md-2 text-center InHouseborder">
+                                    <b>DATE</b>
+                                </div>
+                                <div class="col-md-2 text-center InHouseborder">
+                                    <b>DCEO</b>
+                                </div>
+                                <div class="col-md-2 text-center InHouseborder">
+                                    <b>MGR</b>
+                                </div>
+                                <div class="col-md-2 text-center InHouseborder">
+                                    <b>STAFF</b>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-4 BusRowBtm">
+                                    <br />
+                                </div>
+                                <div class="col-md-2 InHouseborder">
+                                    <br />
+                                    <br />
+                                </div>
+                                <div class="col-md-2 InHouseborder">
+                                    <br />
+                                    <br />
+                                </div>
+                                <div class="col-md-2 InHouseborder">
+                                    <br />
+                                    <br />
+                                </div>
+                                <div class="col-md-2 InHouseborder">
+                                    <br />
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-12 BusRowBtm text-center">
+                                    <h5><b>PARTICULARS OF CUSTOMER</b></h5>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2 BusRowBtm text-center">
+                                    NAME
+                                </div>
+                                <div class="col-md-10 BusRowBtm ">
+                                    @retrievedetail[0].ToString()
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2 BusRowBtm text-center">
+                                    ADDRESS
+                                </div>
+                                <div class="col-md-10 BusRowBtm">
+                                    @retrievedetail[1].ToString()
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2 BusRowBtm text-center">
+                                    LINE OF BUSINESS
+                                </div>
+                                <div class="col-md-10 BusRowBtm">
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2 BusRowBtm text-center">
+                                    CAPITAL PAID
+                                </div>
+                                <div class="col-md-4 BusRowBtm">
+                                    <br />
+                                </div>
+                                <div class="col-md-2 BusRowBtm text-center">
+                                    NUMBER OF STAFF
+                                </div>
+                                <div class="col-md-4 BusRowBtm">
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2 BusRowBtm text-center">
+                                    DATE OF INCORPORATION
+                                </div>
+                                <div class="col-md-4 BusRowBtm">
+                                    <br />
+                                </div>
+                                <div class="col-md-2 BusRowBtm text-center">
+                                    HISTORY
+                                </div>
+                                <div class="col-md-4 BusRowBtm">
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2 text-center InHouseborderLeftRight">
+                                    MONTHLY TURNOVER
+                                </div>
+                                <div class="col-md-4 InHouseborderLeftRight">
+                                    <br />
+                                </div>
+                                <div class="col-md-2 text-center InHouseborderLeftRight">
+                                    PARENT COMPANY
+                                </div>
+                                <div class="col-md-4 BusRowBtm">
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2 BusRowBtm InHouseborderLeftRight">
+                                </div>
+                                <div class="col-md-4 BusRowBtm">
+                                    <br />
+                                </div>
+                                <div class="col-md-2 BusRowBtm">
+                                    <br />
+                                </div>
+                                <div class="col-md-1 BusRowBtm text-center">
+                                    BANK
+                                </div>
+                                <div class="col-md-3 BusRowBtm">
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2 BusRowBtm text-center">
+                                    THEIR SALES
+                                </div>
+                                <div class="col-md-4 BusRowBtm">
+                                    <br />
+                                </div>
+                                <div class="col-md-2 BusRowBtm text-center">
+                                    THEIR PURCHASE
+                                </div>
+                                <div class="col-md-4 BusRowBtm">
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-12 BusRowBtm text-center">
+                                    <h5><b>BANKERS</b></h5>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-12 BusRowBtm">
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-12 BusRowBtm text-center">
+                                    <h5><b>CHECK OF DOCUMENTS SUBMITTED</b></h5>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-12 BusRowBtm">
+                                    <b>See “Important Documentation Checklist”</b>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6 BusRowBtm">
+                                    <b>REMARKS</b>
+                                    <br />
+                                    <br />
+                                    <br />
+                                </div>
+                                <div class="col-md-6 BusRowBtm">
+                                    <b>MANAGEMENT’S COMMMENT</b>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6 BusRowBtm">
+                                    <b>DATE OF OPENING</b>
+                                </div>
+                                <div class="col-md-6 BusRowBtm">
+                                    <br />
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/custom")
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+﻿@model IEnumerable<OCR_Prototype.Models.OCRModel.getDetails>
+
+@{
+    /**/
+    ViewBag.Title = "FormDetail";
+}
+<h4 class="mb-5">Form Detail</h4>
+@using (Html.BeginForm("SaveDetail", "OCR", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    {
+            int refID = 0;
+            //int pageno = 0;
+            string refer = "";
+
+            foreach (var itemref in Model)
+            {
+                //refID = item.ID;
+                refer = itemref.Reference;
+                //pageno = item.pageno;
+            }
+
+            <div class="form-horizontal">
+                <div class="form">
+                    <div class="form-group row">
+                        <div class="col-1">
+                            @Html.Label("Reference")
+                        </div>
+                        <div class="col-4">
+                            @Html.TextBox("refer", refer, new { @class = "form-control", @readonly = "readonly" })
+                        </div>
+                        <div class="col-1">
+                            <a class="btn btn-dark" href="#"
+                               onclick="window.open('/OCR/OriginalFile?item_id=@refer',
+                         'newwindow',
+                         'width=800,height=950');
+                          return false;">Show Uploaded File</a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h4 class="mb-5">Extracted Details</h4>
+                @{
+                    int num = 0;
+                    int compare = 0;
+                    foreach (var item in Model)
+                    {
+                        num = item.pageno;
+                        refID = item.FormID;
+
+                        if (num != compare)
+                        {
+                            compare = num;
+
+                            <div class="form">
+                                <div class="form-group row">
+                                    <div class="col-1">
+                                        @Html.Label("ID")
+                                    </div>
+                                    <div class="col-3">
+                                        @Html.TextBox("refID", refID, new { @class = "form-control", @readonly = "readonly" })
+                                    </div>
+                                    <div class="col-offset-1 col-1">
+                                        @Html.Label("Page Number")
+                                    </div>
+                                    <div class="col-1">
+                                        @Html.TextBox("pageno", num, new { @class = "form-control", @readonly = "readonly" })
+                                    </div>
+                                </div>
+                                @{
+                                    int i = 1;
+
+                                    foreach (var itemcrop in Model)
+                                    {
+                                        if (num == itemcrop.pageno)
+                                        {
+                                            <div class="form-group row">
+                                                <div class="col-1">
+                                                    @Html.Label("Text " + i)
+                                                </div>
+                                                <div class="col-5">
+                                                    @Html.TextArea("TextCrop", itemcrop.Crop_Text, new { @class = "form-control" , @rows = 3, @cols = 1 })
+                                                    @Html.Hidden("FormCropID", itemcrop.CropID)
+                                                </div>
+                                                <!--<div class="col-2">
+                                                    <i class="fa fa-camera-retro fa-2x"></i>
+                                                </div>-->
+                                                <div class="col-4">
+                                                    <div id="thumbwrap">
+                                                        <a class="thumb" href="#"><i class="fa fa-camera-retro fa-2x"></i><span><img src=@Url.Content(itemcrop.Crop_Imgpath.Replace(" ", "%20")) alt=""></span></a>
+                                                    </div>
+                                                </div>
+                                                <!--<div class="col-2">
+                                                    <img src=Url.Content(itemcrop.Crop_Imgpath) alt="">
+                                                </div>-->
+                                            </div>
+                                            i++;
+                                        }
+                                    }
+                                }
+                            </div> <!--end.form-->
+                        }
+                    }
+                }
+                <hr />
+                <div class="form-group row">
+                    <div class="col-3">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                        <input type="button" value="Back" class="btn btn-secondary" onclick="window.history.back();" />
+                    </div>
+                </div>
+            </div>
+    }
+}

@@ -1,0 +1,25 @@
+﻿  <!-- Modal Header -->
+<div class="modal-header">
+    <h4 class="modal-title">Information</h4>
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+</div>
+
+<!-- Modal body -->
+<div class="modal-body">
+    Upload successfully
+</div>
+
+<!-- Modal footer -->
+<div class="modal-footer">
+    <a href="/OCR/FormListing" class="btn btn-primary">Go to listing</a>
+    <button type="button" class="btn btn-outline-primary" id="btnclose" data-dismiss="modal">Close</button>
+</div>
+
+
+<script type="text/javascript">
+    $(function () {
+        $('#btnclose').click(function () {
+            location.reload();
+        });
+    });
+</script>

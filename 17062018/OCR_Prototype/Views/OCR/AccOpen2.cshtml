@@ -1,0 +1,514 @@
+﻿@model IEnumerable<OCR_Prototype.Models.OCRModel.getDetails>
+
+@{
+    Layout = null;  
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Account Opening Form</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/font-awesome-4.7.0/css/font-awesome.css")
+    @Styles.Render("~/Content/hover.css")
+    @Styles.Render("~/Content/custom.css")
+</head>
+
+<body>
+    @{
+        List<string> retrievedetail = new List<string>();
+
+        foreach (var itemref in Model)
+        {
+            retrievedetail.Add(itemref.Crop_Text);
+
+        }
+    }
+    <div class="rowmargin">
+        <div class="col-md-10">
+            <div class="panel panel-primary">
+                <div class="panel-heading clickable">
+                    <h3 class="panel-title">
+                        Account Opening Page 1
+                    </h3>
+                    <span class="pull-right "><i class="fa fa-minus"></i></span>
+                </div>
+                <div class="panel-body">
+                    <div class="form">
+                        <div class="firstrow">
+                            <h6 class="mb-5">For Bank Use Only</h6>
+                        </div>
+                        <div class="secondrow">
+                            Verification of Authorised Signatories/Legal Representatives of the applicant
+                        </div>
+                        </br>
+                        </br>
+                        <div class="thirdrow">
+                            <div>
+                                Signature :
+                            </div>
+                            <div>
+                                Staff Name :
+                            </div>
+                            <div>
+                                Position :
+                            </div>
+                            <div>
+                                Date :
+                            </div>
+                        </div>
+                        </br>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-2 firsttable">
+                            Document Check
+                        </div>
+                        <div class="col-md-2 firsttable">
+                            DCHEQS Check
+                        </div>
+                        <div class="col-md-2 firsttable">
+                            CCRIS Check
+                        </div>
+                        <div class="col-md-2 firsttable">
+                            AML\Sanction Check
+                        </div>
+                        <div class="col-md-2 firsttable">
+                            G-CIF\C-CIF
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-2 firsttable">
+                            </br>
+                        </div>
+                        <div class="col-md-2 firsttable">
+                            </br>
+                        </div>
+                        <div class="col-md-2 firsttable">
+                            </br>
+                        </div>
+                        <div class="col-md-2 firsttable">
+                            </br>
+                        </div>
+                        <div class="col-md-2 firsttable">
+                            </br>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-2 firsttable">
+                            Approved
+                        </div>
+                        <div class="col-md-2 firsttable">
+                            Checked
+                        </div>
+                        <div class="col-md-2 firsttable">
+                            Made
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-2 firsttable">
+                            </br>
+                        </div>
+                        <div class="col-md-2 firsttable">
+                            </br>
+                        </div>
+                        <div class="col-md-2 firsttable">
+                            </br>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="form-row">
+                        <div class="col-md-6 firsttable">
+                            T24 Account No.
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-2 firsttable">
+                            Approved - OPS
+                        </div>
+                        <div class="col-md-2 firsttable">
+                            Checked - OPS
+                        </div>
+                        <div class="col-md-2 firsttable">
+                            Made - OPS
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-2 firsttable">
+                            </br>
+                        </div>
+                        <div class="col-md-2 firsttable">
+                            </br>
+                        </div>
+                        <div class="col-md-2 firsttable">
+                            </br>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="form-row">
+                        <div class="col-md-6 firsttable">
+                            SDS Input
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-2 firsttable">
+                            Approved - OPS
+                        </div>
+                        <div class="col-md-2 firsttable">
+                            Checked - OPS
+                        </div>
+                        <div class="col-md-2 firsttable">
+                            Made - OPS
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-2 firsttable">
+                            </br>
+                        </div>
+                        <div class="col-md-2 firsttable">
+                            </br>
+                        </div>
+                        <div class="col-md-2 firsttable">
+                            </br>
+                        </div>
+                    </div>
+                    </br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rowmargin">
+        <div class="col-md-10">
+            <div class="panel panel-primary">
+                <div class="panel-heading clickable">
+                    <h3 class="panel-title">
+                        Account Opening Page 2
+                    </h3>
+                    <span class="pull-right "><i class="fa fa-minus"></i></span>
+                </div>
+                <div class="panel-body">
+                    <div class="form">
+                        <div class="pg2firstrow">
+                            <h5 class="mb-5">Mizuho Bank (Malaysia) Berhad (923693-H)</h5>
+                        </div>
+                        <div class="pg2secondrow text-center">
+                            <h6 class="mb-5">(Formerly known as MIZUHO CORPORATE BANK (MALAYSIA) BERHAD)</h6>
+                        </div>
+                        <div class="pg2firstrow">
+                            <h5 class="mb-5">Head Office, Kuala Lumpur</h5>
+                        </div>
+                        <div class="pg2firstrow">
+                            <h5 class="mb-5">APPLICATION FOR ACCOUNT OPENING</h5>
+                        </div>
+                        <div class="firstrow">
+                            <h6 class="mb-5">A. Type of Application</h6>
+                        </div>
+                        <div>
+                            <label>Please tick the appropriate box:</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-1 secondtable">
+                            </br>
+                        </div>
+                        <div class="col-md-3 secondtable">
+                            Current Account
+                        </div>
+                        <div class="col-md-2 secondtable">
+                            Curreny:
+                        </div>
+                        <div class="col-md-6 secondtable">
+                            </br>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-1 secondtable">
+                            </br>
+                        </div>
+                        <div class="col-md-3 secondtable">
+                            Savings Account
+                        </div>
+                        <div class="col-md-2 secondtable">
+                            Curreny:
+                        </div>
+                        <div class="col-md-6 secondtable">
+                            </br>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="firstrow">
+                        <h6 class="mb-5">B. Application</h6>
+                    </div>
+                    <div>
+                        <div class="form-row">
+                            <div class="col-md-2 thirdtable">
+                                Legal Name
+                            </div>
+                            <div class="col-md-10 thirdtable">
+                                (as reqistered in the constitutional documents)
+                                </br>
+                                @retrievedetail[0].ToString()
+                                </br>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-2 thirdtable">
+                                Legal Form
+                            </div>
+                            <div class="col-md-10 thirdtable">
+                                (private limited company/ public listed company / partnership/ sole-proprietorship or other legal form as incoporated)
+                                </br>
+                                </br>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-2 BusRowTop">
+                                Type of Business/ Industry
+                            </div>
+                            <div class="col-md-4 BusRowTop">
+                            </div>
+                            <div class="col-md-2 thirdtable">
+                                Number of Staff
+                            </div>
+                            <div class="col-md-4 thirdtable">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-2 BusRowBtm">
+                            </div>
+                            <div class="col-md-4 BusRowBtm">
+                            </div>
+                            <div class="col-md-2 thirdtable">
+                                Paid-up Capital
+                            </div>
+                            <div class="col-md-4 thirdtable">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-2 thirdtable">
+                                Registration/ Incorporation Number
+                            </div>
+                            <div class="col-md-4 thirdtable">
+                            </div>
+                            <div class="col-md-2 thirdtable">
+                                Date of registration/ Incorporation
+                            </div>
+                            <div class="col-md-4 thirdtable">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="firstrow">
+                        <h6 class="mb-5">C. Parent Company(ies)</h6>
+                    </div>
+                    <div>
+                        <div class="form-row">
+                            <div class="col-md-2 BusRowTop">
+                                Name
+                            </div>
+                            <div class="col-md-2 BusRowTop">
+                                English :
+                            </div>
+                            <div class="col-md-8 thirdtable">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-2 BusRowBtm">
+                            </div>
+                            <div class="col-md-2 BusRowBtm">
+                                Japanese :
+                            </div>
+                            <div class="col-md-8 thirdtable">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-2 thirdtable">
+                                Address
+                            </div>
+                            <div class="col-md-10 thirdtable">
+                                @retrievedetail[1].ToString()
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-2 BusRowTop">
+                                Type of Business/ Industry
+                            </div>
+                            <div class="col-md-4 BusRowTop">
+                            </div>
+                            <div class="col-md-2 thirdtable">
+                                Number of Staff
+                            </div>
+                            <div class="col-md-4 thirdtable">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-2 BusRowBtm">
+                            </div>
+                            <div class="col-md-4 BusRowBtm">
+                            </div>
+                            <div class="col-md-2 thirdtable">
+                                Paid-up Capital
+                            </div>
+                            <div class="col-md-4 thirdtable">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-2 thirdtable">
+                                We have an account with the Mizuho Financial Group
+                            </div>
+                            <div class="col-md-2 thirdtable text-center">
+                                YES
+                            </div>
+                            <div class="col-md-2 thirdtable text-center">
+                                NO
+                            </div>
+                            <div class="col-md-2 thirdtable">
+                                Branch/Head OFfice
+                            </div>
+                            <div class="col-md-4 thirdtable">
+                            </div>
+                        </div>
+                        <div class="firstrow">
+                            <h6 class="mb-5">D. Contact Details</h6>
+                        </div>
+                        <div>
+                            <div class="form-row">
+                                <div class="col-md-2">
+                                    Legal Address
+                                </div>
+                                <div class="offset-1 col-md-5">
+                                    (as registered in the contitutional document)
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2 thirdtable">
+                                    Address
+                                </div>
+                                <div class="col-md-10 thirdtable">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2 thirdtable">
+                                    City
+                                </div>
+                                <div class="col-md-4 thirdtable">
+                                </div>
+                                <div class="col-md-2 thirdtable">
+                                    State/Province
+                                </div>
+                                <div class="col-md-4 thirdtable">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2 thirdtable">
+                                    Postal/Zip Code
+                                </div>
+                                <div class="col-md-4 thirdtable">
+                                </div>
+                                <div class="col-md-2 thirdtable">
+                                    Country
+                                </div>
+                                <div class="col-md-4 thirdtable">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2 thirdtable">
+                                    Telephone Number
+                                </div>
+                                <div class="col-md-4 thirdtable">
+                                </div>
+                                <div class="col-md-2 thirdtable">
+                                    Facsimile Number
+                                </div>
+                                <div class="col-md-4 thirdtable">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2 thirdtable">
+                                    Website address
+                                </div>
+                                <div class="col-md-10 thirdtable">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-3">
+                                    Business/Operating/Mailing Address
+                                </div>
+                                <div class="offset-1 col-md-5">
+                                    (if different from the address above)
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2 thirdtable">
+                                    Address
+                                </div>
+                                <div class="col-md-10 thirdtable">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2 thirdtable">
+                                    City
+                                </div>
+                                <div class="col-md-4 thirdtable">
+                                </div>
+                                <div class="col-md-2 thirdtable">
+                                    State/Province
+                                </div>
+                                <div class="col-md-4 thirdtable">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2 thirdtable">
+                                    Postal/Zip Code
+                                </div>
+                                <div class="col-md-4 thirdtable">
+                                </div>
+                                <div class="col-md-2 thirdtable">
+                                    Country
+                                </div>
+                                <div class="col-md-4 thirdtable">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2 thirdtable">
+                                    Telephone Number
+                                </div>
+                                <div class="col-md-4 thirdtable">
+                                </div>
+                                <div class="col-md-2 thirdtable">
+                                    Facsimile Number
+                                </div>
+                                <div class="col-md-4 thirdtable">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2 thirdtable">
+                                    Website address
+                                </div>
+                                <div class="col-md-10 thirdtable">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="firstrow">
+                            <h6 class="mb-5">E. Cheque Book Request - (For RM Current Account only)</h6>
+                        </div>
+                        <div class="col-md-12 thirdtable">
+                            Please issue us _________ cheque books containing fifty (50) cheque leaves in easch book and debit the necessary charges to our Account.
+                            </br>
+                            </br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/custom")
+
+</body>
+</html>

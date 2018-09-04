@@ -1,0 +1,48 @@
+﻿@model IEnumerable<OCR_Prototype.Models.OCRModel.Listing>
+@{
+    ViewBag.Title = "FormListing";
+}
+<div class="col-10">
+    <h2 class="mb-5">Form Detail</h2>
+    <table class="table table-hover table-sm" id="formlisting">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Reference</th>
+                <th>Creation Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Reference)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreationDate, "{0:yyyy/MM/dd}")
+                    </td>
+                    <td>
+                        @Html.ActionLink("Details", "FormDetail", new { id = item.Reference })
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#formlisting').DataTable({
+                "order": [[0, "desc"]],
+                "bDestroy": true
+            });
+        });
+    </script>
+}

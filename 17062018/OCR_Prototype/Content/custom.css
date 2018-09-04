@@ -1,0 +1,79 @@
+﻿.firsttable, .secondtable, .thirdtable, .InHouseborder {
+    border-style: solid;
+    border-width: 1px;
+}
+
+.InHouseborderLeftRight {
+    border-left: solid;
+    border-right: solid;
+    border-width: 1px;
+}
+
+.firstrow{
+    background-color:black;
+    color:white;
+    font:bold;
+}
+
+.mb-5{
+    margin-bottom:unset !important;
+}
+
+.pg2firstrow {
+    text-align: center;
+    font: bold;
+}
+
+.pg2secondrow .mb-5{
+    font: bold;
+    font-size : 11px;
+}
+
+.BusRowBtm {
+    border-bottom: solid;
+    border-right: solid;
+    border-left: solid;
+    border-width: 1px;
+}
+
+.BusRowTop {
+    border-top: solid;
+    border-right: solid;
+    border-left: solid;
+    border-width: 1px;
+}
+
+.Fingroup {
+    border-right: solid;
+    border-width: 1px;
+}
+
+.rowmargin{
+    margin-left: 20px;
+}
+
+/*For collapseable panel for the forms to display multipage*/
+.clickable {
+    cursor: pointer;
+}
+
+.clickable .glyphicon {
+    background: rgba(0, 0, 0, 0.15);
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px
+}
+
+.panel-heading span {
+    margin-top: -23px;
+    font-size: 15px;
+    margin-right: -9px;
+}
+
+a.clickable {
+    color: inherit;
+}
+
+    a.clickable:hover {
+        text-decoration: none;
+    }

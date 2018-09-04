@@ -1,0 +1,62 @@
+﻿@model IEnumerable<OCR_Prototype.Models.OCRModel.getDetails>
+
+@{
+    Layout = null;
+    ViewBag.Title = "Uploaded File";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - New Page Design</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/font-awesome-4.7.0/css/font-awesome.css")
+    @Styles.Render("~/Content/hover.css")
+
+</head>
+<body class="bg-dark">
+
+    <header>
+        <nav id="navbar-example2" class="navbar navbar-dark bg-primary fixed-top">
+            <div class="col-md-6"><h5 class="text-light"><span class="oi oi-image" title="icon name" aria-hidden="true"></span> Uploaded File</h5></div>
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="#fat"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#mdo"></a>
+                </li>
+                <li class="nav-item">
+                    <div class="col-md-12 text-center"><input type="button" value="Close" class="btn btn-light" onclick="window.close();" /></div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <hr />
+    <main role="main" class="container">
+
+        <div class="col-md-12">
+            <br />
+            @foreach (var item in Model)
+            {
+                <p class="text-center h4 py-2"><span class="badge badge-info">Page: @item.pageno</span></p>
+                <img id="upload-file" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src=@Url.Content(item.Form_Path.Replace(" ", "%20")) class="b-lazy" />
+                <hr />
+            }
+        </div>
+
+    </main>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+
+    <script>
+        ; (function () {
+            var bLazy = new Blazy();
+        })();
+    </script>
+</body>
+</html>
